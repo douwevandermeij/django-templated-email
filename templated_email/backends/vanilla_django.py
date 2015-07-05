@@ -66,7 +66,7 @@ class TemplateBackend(object):
         full_template_name = '%s.%s' % (prefixed_template_name, file_extension)
 
         try:
-            multi_part = get_template(full_template_name)
+            multi_part = get_template(full_template_name).template
         except TemplateDoesNotExist:
             multi_part = None
 
